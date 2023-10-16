@@ -5,42 +5,48 @@ function actualizarCarrito() {
   itemsCarrito.innerHTML = "";
 
   let total = 0;
-  carrito.forEach((producto) => {
-    const listItem = document.createElement("li");
+  carrito.forEach((producto, index) => {
+    const filaProducto = document.createElement("tr");
 
-    // Crear una div para el contenido del producto
-    const productoDiv = document.createElement("div");
-    productoDiv.className = "producto-info";
-
-    // Crear una imagen para el producto
+    // Celda de imagen
+    const celdaImagen = document.createElement("td");
     const imagenProducto = document.createElement("img");
-    imagenProducto.src = producto.imagen; // Establece la URL de la imagen
-    productoDiv.appendChild(imagenProducto);
+    imagenProducto.src = producto.imagen;
+    celdaImagen.appendChild(imagenProducto);
+    filaProducto.appendChild(celdaImagen);
 
-    // Agregar el nombre del producto
-    const nombreProducto = document.createElement("span");
-    nombreProducto.className = "nombre-producto";
-    nombreProducto.innerText = producto.nombre;
-    productoDiv.appendChild(nombreProducto);
+    // Celda de nombre
+    const celdaNombre = document.createElement("td");
+    celdaNombre.innerText = producto.nombre;
+    filaProducto.appendChild(celdaNombre);
 
-    // Agregar el precio del producto
-    const precioProducto = document.createElement("span");
-    precioProducto.className = "precio-producto";
-    precioProducto.innerText = `$${producto.precio.toFixed(2)}`;
-    productoDiv.appendChild(precioProducto);
+    // Celda de precio
+    const celdaPrecio = document.createElement("td");
+    celdaPrecio.innerText = `$${producto.precio.toFixed(2)}`;
+    filaProducto.appendChild(celdaPrecio);
 
-    // Agregar el botón "Contactar"
+    // Celda de botón "Contactar"
+    const celdaBotonContactar = document.createElement("td");
     const botonContactar = document.createElement("button");
     botonContactar.innerText = "Contactar";
-    botonContactar.className = "boton-contactar";
     botonContactar.onclick = function() {
-      // Agrega aquí la lógica para contactar al vendedor o realizar una acción específica
       alert(`Contactando al vendedor de ${producto.nombre}`);
     };
-    productoDiv.appendChild(botonContactar);
+    celdaBotonContactar.appendChild(botonContactar);
+    filaProducto.appendChild(celdaBotonContactar);
 
-    listItem.appendChild(productoDiv);
-    itemsCarrito.appendChild(listItem);
+    // Celda de botón de eliminación
+    const celdaBotonEliminar = document.createElement("td");
+    const botonEliminar = document.createElement("button");
+    botonEliminar.innerText = "X";
+    botonEliminar.className = "boton-eliminar";
+    botonEliminar.onclick = function() {
+      eliminarProductoDelCarrito(index);
+    };
+    celdaBotonEliminar.appendChild(botonEliminar);
+    filaProducto.appendChild(celdaBotonEliminar);
+
+    itemsCarrito.appendChild(filaProducto);
 
     total += producto.precio;
   });
@@ -66,6 +72,10 @@ botonAbrirCarrito.addEventListener("click", abrirCarrito);
 // Ejemplo de cómo agregar productos al carrito
 function agregarAlCarrito(producto) {
   carrito.push(producto);
+  actualizarCarrito();
+}
+function eliminarProductoDelCarrito(index) {
+  carrito.splice(index, 1);
   actualizarCarrito();
 }
 

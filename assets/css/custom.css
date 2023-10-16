@@ -122,8 +122,6 @@ ul {
   cursor: pointer;
 }
 
-
-
 /* Estilo para el total del carrito */
 p.total-carrito {
   font-size: 16px;
@@ -132,4 +130,20 @@ p.total-carrito {
   text-align: center; /* Centrado */
   background: #e6e6e6; /* Fondo de color gris claro */
   padding: 10px;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #007BFF; /* Azul */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Añadir bordes redondeados */
+}
+
+/* Estilo para el botón de eliminación */
+.boton-eliminar {
+  background-color: #ff0000; /* Color de fondo rojo para el botón de eliminación */
+  color: #fff; /* Color de texto blanco */
 }
