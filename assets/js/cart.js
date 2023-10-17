@@ -82,3 +82,4 @@ function eliminarProductoDelCarrito(index) {
 // Agregar productos de ejemplo al carrito
 agregarAlCarrito({ nombre: "Producto 1", precio: 10.00, imagen: "URL_de_la_imagen1" });
 agregarAlCarrito({ nombre: "Producto 2", precio: 20.00, imagen: "URL_de_la_imagen2" });
+
