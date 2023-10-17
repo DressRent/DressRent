@@ -48,7 +48,10 @@ a {
 .text-muted { color: #bcbcbc !important;}
 .text-success { color: #fe76a8 !important;}
 .text-light { color: #cfd6e1 !important;}
+.text-dark { color: #000000 !important;}
 .bg-dark { background-color: #212934 !important;}
+.bg-grey { background-color: #f5f5f2 !important;}
+.bg-gray { background-color: #f0f0ed !important;}
 .bg-light { background-color: #e9eef5 !important;}
 .bg-black { background-color: #1d242d !important;}
 .bg-success { background-color: #F3A6ED !important;}
@@ -69,7 +72,7 @@ a {
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
 /* Hero Carousel */
-#template-mo-zay-hero-carousel { background: #efefef !important;}
+#template-mo-zay-hero-carousel { background: #FFEFD1 !important;}
 /* Accordion */
 .templatemo-accordion a { color: #000;}
 .templatemo-accordion a:hover { color: #333d4a;}
