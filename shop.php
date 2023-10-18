@@ -335,49 +335,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <?php
-                        while ($row = pg_fetch_assoc($result)) {
-                            echo '<div class="col-md-4">';
-                            echo '<div class="card mb-4 product-wap rounded-0">';
-                            echo '<div class="card rounded-0">';
-                            echo '<img class="card-img rounded-0 img-fluid" src="data:image/jpeg;base64,'.base64_encode($row['imagen']).'">';
-                            echo '<div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">';
-                            echo '<ul class="list-unstyled">';
-                            echo '<li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>';
-                            echo '<li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>';
-                            echo '<li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>';
-                            echo '</ul>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="card-body">';
-                            echo '<a href="shop-single.html" class="h3 text-decoration-none">' . $row['descripcion'] . '</a>';
-                            echo '<ul class="w-100 list-unstyled d-flex justify-content-between mb-0">';
-                            echo '<li>' . $row['tipo'] . '</li>';
-                            echo '<li class="pt-2">';
-                            echo '<span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>';
-                            echo '<span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>';
-                            echo '<span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>';
-                            echo '<span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>';
-                            echo '<span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>';
-                            echo '</li>';
-                            echo '</ul>';
-                            echo '<ul class="list-unstyled d-flex justify-content-center mb-1">';
-                            echo '<li>';
-                            echo '<i class="text-warning fa fa-star"></i>';
-                            echo '<i class="text-warning fa fa-star"></i>';
-                            echo '<i class="text-warning fa fa-star"></i>';
-                            echo '<i class="text-muted fa fa-star"></i>';
-                            echo '<i class="text-muted fa fa-star"></i>';
-                            echo '</li>';
-                            echo '</ul>';
-                            echo '<p class="text-center mb-0">$' . $row['precio'] . '</p>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</div>';
-                        }
-                        ?>
-                    </div>
+                    <?php
+                    include "connection/mostrar.php"
+                    ?>
                     
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
