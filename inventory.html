@@ -49,8 +49,11 @@
 </head>
 <body>
     <h1>Subir una prenda</h1>
-    <form action="procesar_imagen.php" method="post" enctype="multipart/form-data">
-        <label for="descripcion">Descripción:</label>
+    <form action="/dressrent/connection/cargar_img.php" method="post" enctype="multipart/form-data">
+        <label for="id_prenda">ID de Prenda:</label>
+        <input type="text" name="id_prenda" id="id_prenda" required>
+        
+        <label for="descripcion">Descripcion:</label>
         <input type="text" name="descripcion" id="descripcion" required>
 
         <label for="tipo">Tipo:</label>
