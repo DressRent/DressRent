@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/dressrent/assets/css/panel.css">
+</head>
+<body>
+    <h1>Reg&iacute;strate</h1>
+    <form action="/dressrent/connection/register.php" method="post">
+        <label for="usuario_cliente">Nombre de Usuario:</label>
+        <input type="text" name="usuario_cliente" id="usuario_cliente" required>
+        
+        <label for="nom_cliente">Nombre Completo:</label>
+        <input type="text" name="nom_cliente" id="nom_cliente" required>
+        
+        <label for="telefono_cliente">N&uacute;mero de tel&eacute;fono:</label>
+        <input type="text" name="telefono_cliente" id="telefono_cliente" required>
+        
+        <label for="contrasena_cliente">Contrase&ntilde;a:</label>
+        <input type="text" name="contrasena_cliente" id="contrasena_cliente" required>
+
+        <input type="submit" value="REGISTRAR">
+    </form>
+    <p style="text-align: center;">
+        ¿Tienes una cuenta? <a href="login.html">Inicia sesión</a>
+    </p>
+</body>
+</html>
