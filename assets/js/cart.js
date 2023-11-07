@@ -29,11 +29,15 @@ function actualizarCarrito() {
     const celdaBotonContactar = document.createElement("td");
     const botonContactar = document.createElement("button");
     botonContactar.innerText = "Contactar";
+    // Define el enlace al que deseas redirigir
+    const enlaceContactar = "https://t.me/DressReeent_bot"; // Reemplaza con tu enlace deseado
     botonContactar.onclick = function() {
-      alert(`Contactando al vendedor de ${producto.nombre}`);
+      // Redirige al usuario al enlace especificado
+      window.location.href = enlaceContactar;
     };
     celdaBotonContactar.appendChild(botonContactar);
     filaProducto.appendChild(celdaBotonContactar);
+
 
     // Celda de botón de eliminación
     const celdaBotonEliminar = document.createElement("td");
@@ -69,17 +73,28 @@ function cerrarCarrito() {
 const botonAbrirCarrito = document.getElementById("abrir-carrito");
 botonAbrirCarrito.addEventListener("click", abrirCarrito);
 
-// Ejemplo de cómo agregar productos al carrito
-function agregarAlCarrito(producto) {
-  carrito.push(producto);
-  actualizarCarrito();
+// Agregar productos al carrito desde la base de datos
+function agregarProductoDesdeBD(idProducto) {
+  // Realizar una solicitud al servidor para obtener los detalles del producto
+  fetch(`/dressrent/connection/obtener_producto.php?id=${idProducto}`)
+    .then(response => response.json())
+    .then(producto => {
+      if (producto) {
+        agregarAlCarrito(producto);
+      } else {
+        alert("Producto no encontrado en la base de datos");
+      }
+    })
+    .catch(error => {
+      console.error("Error al obtener el producto: " + error);
+    });
 }
+
 function eliminarProductoDelCarrito(index) {
   carrito.splice(index, 1);
   actualizarCarrito();
 }
 
-// Agregar productos de ejemplo al carrito
-agregarAlCarrito({ nombre: "Producto 1", precio: 10.00, imagen: "URL_de_la_imagen1" });
-agregarAlCarrito({ nombre: "Producto 2", precio: 20.00, imagen: "URL_de_la_imagen2" });
-
+// Ejemplo de cómo agregar productos al carrito (puedes eliminar estos ejemplos)
+agregarProductoDesdeBD(1); // Ejemplo de producto con ID 1
+agregarProductoDesdeBD(2); // Ejemplo de producto con ID 2

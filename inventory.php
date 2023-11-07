@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuarioo'])) {
+    // El usuario no ha iniciado sesión, redirigir o mostrar un mensaje de acceso denegado.
+    header("Location: /dressrent/index.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

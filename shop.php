@@ -28,78 +28,73 @@
                     <i class="fa fa-envelope mx-2"></i>
                     <a class="navbar-sm-brand text-dark text-decoration-none" href="mailto:dressrentcorporative@gmail.com">dressrentcorporative@gmail.com</a>
                 </div>
+                <div>
+                    <a class="navbar-sm-brand text-dark text-decoration-none" href="/dressrent/register_v.html">¿Eres vendedor?</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- Close Top Nav -->
 
 
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
 
-        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-            DressRent
-        </a>
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
+                DressRent
+            </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar align-self-center d-flex">
-                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                        <div class="input-group-text">
-                            <i class="fa fa-fw fa-search"></i>
-                        </div>
-                    </div>
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.php">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                </a>
-                <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
-                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                </a>
-                  
-                <div id="carrito-modal" class="modal" style="display: none;">
-                    <div class="modal-content">
-                      <span class="close" onclick="cerrarCarrito()">&times;</span>
-                      <h2>Carrito de Compras</h2>
-                      <table id="items-carrito">
-                        <!-- Aquí se generará la tabla con los productos -->
-                      </table>
-                      <p id="total-carrito" class="total-carrito">Total: $0.00</p>
-                    </div>
-                </div>                      
-                
-                <a class="nav-icon position-relative text-decoration-none" href="#">
-                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                </a>
-            </div>
-        </div>
+                <div class="navbar align-self-center d-flex">
+                     <!-- Agrega un botón para abrir el carrito -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+                    
+                    <!-- Modal del carrito -->
+                    <div id="carrito-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarCarrito()">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="items-carrito">
+                                <!-- Aquí se generará la tabla con los productos del carrito -->
+                            </table>
+                            <p id="total-carrito" class="total-carrito">Total: $0.00</p>
+                        </div>
+                    </div>                 
+                    
+                    <a class="nav-icon position-relative text-decoration-none" href="<?php echo isset($_SESSION['usuario']) ? 'profile.php' : 'register.html'; ?>">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
 
-    </div>
-</nav>
-<!-- Close Header -->
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -117,8 +112,6 @@
             </form>
         </div>
     </div>
-
-
 
     <!-- Start Content -->
     <div class="container py-5">
@@ -232,7 +225,8 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="javascript:void(0);" onclick="agregarProductoDesdeBD(1);"><i class="fas fa-cart-plus"></i></a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -335,6 +329,10 @@
                             </div>
                         </div>
                     </div>
+                    <?php
+                    include "connection/mostrar.php"
+                    ?>
+                    
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
@@ -545,17 +543,16 @@
         <div class="container my-4">
             <div class="row text-center py-3">
                 <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Our Brands</h1>
+                    <h1 class="h1">Marcas</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        Lorem ipsum dolor sit amet.
+                       Nuestros vendedores ofrecen una amplia gama de marcas
                     </p>
                 </div>
                 <div class="col-lg-9 m-auto tempaltemo-carousel">
                     <div class="row d-flex flex-row">
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="prev">
                                 <i class="text-light fas fa-chevron-left"></i>
                             </a>
                         </div>
@@ -563,7 +560,7 @@
 
                         <!--Carousel Wrapper-->
                         <div class="col">
-                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
+                            <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="templatemo-slide-brand" data-bs-ride="carousel">
                                 <!--Slides-->
                                 <div class="carousel-inner product-links-wap" role="listbox">
 
@@ -571,16 +568,16 @@
                                     <div class="carousel-item active">
                                         <div class="row">
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/Logo_ACNegro.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/logo-zara-png-2.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/Hugo-Boss-Logo-PNG-File.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/Calvin-Klein-Logo-1975-1992.png" alt="Brand Logo"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -590,39 +587,22 @@
                                     <div class="carousel-item">
                                         <div class="row">
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brunocorza.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/RAGAZZA LOGO.png" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/OIP.jpg" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/armani.png" alt="Brand Logo"></a>
                                             </div>
                                         </div>
                                     </div>
                                     <!--End Second slide-->
 
-                                    <!--Third slide-->
-                                    <div class="carousel-item">
-                                        <div class="row">
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
-                                            </div>
-                                            <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--End Third slide-->
+                                   
 
                                 </div>
                                 <!--End Slides-->
@@ -632,7 +612,7 @@
 
                         <!--Controls-->
                         <div class="col-1 align-self-center">
-                            <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
+                            <a class="h1" href="#templatemo-slide-brand" role="button" data-bs-slide="next">
                                 <i class="text-light fas fa-chevron-right"></i>
                             </a>
                         </div>
@@ -645,8 +625,8 @@
     <!--End Brands-->
 
 
-    <!-- Start Footer -->
-    <footer class="bg-grey" id="tempaltemo_footer">
+        <!-- Start Footer -->
+        <footer class="bg-grey" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
 
@@ -672,7 +652,7 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-dark border-bottom pb-3 border-light">Información adicional</h2>
                     <ul class="list-unstyled text-dark footer-link-list">
-                        <li><a class="text-decoration-none" style="color: black;" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" style="color: black;" href="index.php">Inicio</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="about.html">Sobre Nosotros</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="contact.html">Contáctenos</a></li>
                     </ul>

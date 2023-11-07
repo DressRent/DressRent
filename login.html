@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/dressrent/assets/css/panel.css">
+</head>
+<body>
+    <h1>Iniciar sesi&oacute;n</h1>
+    <form action="/dressrent/connection/login.php" method="post" enctype="multipart/form-data">
+        <label for="usuario_cliente">Usuario:</label>
+        <input type="text" name="usuario_cliente" id="usuario_cliente" required>
+        
+        <label for="contrasena_cliente">Contrase&ntilde;a:</label>
+        <input type="text" name="contrasena_cliente" id="contrasena_cliente" required>
+
+        <input type="submit" value="INICIAR">
+    </form>
+    <p style="text-align: center;">
+        ¿No estas registrado? <a href="register.html">Resg&iacute;strate</a>
+    </p>
+</body>
+</html>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
                 DressRent
             </a>
 
@@ -53,7 +56,7 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
+                            <a class="nav-link" href="index.php">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">Sobre nosotros</a>
@@ -67,36 +70,28 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
+                     <!-- Agrega un botón para abrir el carrito -->
                     <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                     </a>
-                      
+                    
+                    <!-- Modal del carrito -->
                     <div id="carrito-modal" class="modal" style="display: none;">
                         <div class="modal-content">
-                          <span class="close" onclick="cerrarCarrito()">&times;</span>
-                          <h2>Carrito de Compras</h2>
-                          <table id="items-carrito">
-                            <!-- Aquí se generará la tabla con los productos -->
-                          </table>
-                          <p id="total-carrito" class="total-carrito">Total: $0.00</p>
+                            <span class="close" onclick="cerrarCarrito()">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="items-carrito">
+                                <!-- Aquí se generará la tabla con los productos del carrito -->
+                            </table>
+                            <p id="total-carrito" class="total-carrito">Total: $0.00</p>
                         </div>
-                    </div>                      
+                    </div>                 
                     
-                    <a class="nav-icon position-relative text-decoration-none" href="register.html">
+                    <a class="nav-icon position-relative text-decoration-none" href="<?php echo isset($_SESSION['usuario']) ? 'profile.php' : 'register.html'; ?>">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
+
                 </div>
             </div>
 
@@ -328,7 +323,7 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-dark border-bottom pb-3 border-light">Información adicional</h2>
                     <ul class="list-unstyled text-dark footer-link-list">
-                        <li><a class="text-decoration-none" style="color: black;" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" style="color: black;" href="index.php">Inicio</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="about.html">Sobre Nosotros</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="contact.html">Contáctenos</a></li>
                     </ul>
