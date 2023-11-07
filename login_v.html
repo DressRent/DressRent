@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/dressrent/assets/css/panel.css">
+</head>
+<body>
+    <h1>Iniciar sesi&oacute;n</h1>
+    <form action="/dressrent/connection/login_v.php" method="post" enctype="multipart/form-data">
+        <label for="nom_vendedor">Usuario:</label>
+        <input type="text" name="nom_vendedor" id="nom_vendedor" required>
+        
+        <label for="contrasena_vendedor">Contrase&ntilde;a:</label>
+        <input type="text" name="contrasena_vendedor" id="contrasena_vendedor" required>
+
+        <input type="submit" value="INICIAR">
+    </form>
+    <p style="text-align: center;">
+        ¿No eres un vendedor registrado? <a href="register_v.html">Resg&iacute;strate</a>
+    </p>
+</body>
+</html>

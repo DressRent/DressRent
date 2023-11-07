@@ -36,11 +36,15 @@
                     <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
                     <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
                 </div>
+                <div>
+                    <a class="navbar-sm-brand text-dark text-decoration-none" href="/dressrent/register_v.html">¿Eres vendedor?</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- Close Top Nav -->
 
+<<<<<<< Updated upstream
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
@@ -53,10 +57,26 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+=======
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
+                DressRent
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+>>>>>>> Stashed changes
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
@@ -93,6 +113,47 @@
                 </div>
             </div>
 
+=======
+                            <a class="nav-link" href="index.php">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.php">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                     <!-- Agrega un botón para abrir el carrito -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+                    
+                    <!-- Modal del carrito -->
+                    <div id="carrito-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarCarrito()">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="items-carrito">
+                                <!-- Aquí se generará la tabla con los productos del carrito -->
+                            </table>
+                            <p id="total-carrito" class="total-carrito">Total: $0.00</p>
+                        </div>
+                    </div>                 
+                    
+                    <a class="nav-icon position-relative text-decoration-none" href="<?php echo isset($_SESSION['usuario']) ? 'profile.php' : 'register.html'; ?>">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+
+                </div>
+            </div>
+
+>>>>>>> Stashed changes
         </div>
     </nav>
     <!-- Close Header -->
@@ -288,6 +349,7 @@
     <!--End Brands-->
 
 
+<<<<<<< Updated upstream
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -390,6 +452,65 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+=======
+        <!-- Start Footer -->
+        <footer class="bg-grey" id="tempaltemo_footer">
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-success border-bottom pb-3 border-light logo">DressRent</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li>
+                                <i class="fa fa-envelope fa-fw"></i>
+                                <a class="text-decoration-none" style="color: black;" href="mailto:dressrentcorporative@gmail.com">dressrentcorporative@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-dark border-bottom pb-3 border-light">Productos</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Vestidos</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Trajes</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Accesorios</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-dark border-bottom pb-3 border-light">Información adicional</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li><a class="text-decoration-none" style="color: black;" href="index.php">Inicio</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="about.html">Sobre Nosotros</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="contact.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 bg-gray py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-left text-dark" style="text-align: center;">
+                                Desarrollado por <a rel="sponsored" style="color: black;" href="index.html">DressRent &copy; 2023</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </footer>
+        <!-- End Footer -->
+    
+        <!-- Start Script -->
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/cart.js"></script>
+        <!-- End Script -->
+>>>>>>> Stashed changes
 </body>
 
 </html>

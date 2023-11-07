@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <title>DressRent - Contacto</title>
     <meta charset="utf-8">
@@ -39,6 +38,9 @@
                     <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
                     <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
                 </div>
+                <div>
+                    <a class="navbar-sm-brand text-dark text-decoration-none" href="/dressrent/register_v.html">¿Eres vendedor?</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -49,8 +51,13 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
+<<<<<<< Updated upstream
             <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
                 Zay
+=======
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
+                DressRent
+>>>>>>> Stashed changes
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,13 +68,21 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="index.html">Home</a>
+=======
+                            <a class="nav-link" href="index.php">Inicio</a>
+>>>>>>> Stashed changes
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
+<<<<<<< Updated upstream
                             <a class="nav-link" href="shop.html">Shop</a>
+=======
+                            <a class="nav-link" href="shop.php">Tienda</a>
+>>>>>>> Stashed changes
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
@@ -75,6 +90,7 @@
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">
+<<<<<<< Updated upstream
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
@@ -87,13 +103,35 @@
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
+=======
+                     <!-- Agrega un botón para abrir el carrito -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
+>>>>>>> Stashed changes
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
+<<<<<<< Updated upstream
                     <a class="nav-icon position-relative text-decoration-none" href="#">
+=======
+                    
+                    <!-- Modal del carrito -->
+                    <div id="carrito-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarCarrito()">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="items-carrito">
+                                <!-- Aquí se generará la tabla con los productos del carrito -->
+                            </table>
+                            <p id="total-carrito" class="total-carrito">Total: $0.00</p>
+                        </div>
+                    </div>                 
+                    
+                    <a class="nav-icon position-relative text-decoration-none" href="<?php echo isset($_SESSION['usuario']) ? 'profile.php' : 'register.html'; ?>">
+>>>>>>> Stashed changes
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
+
                 </div>
             </div>
 
@@ -118,7 +156,6 @@
         </div>
     </div>
 
-
     <!-- Start Content Page -->
     <div class="container-fluid bg-light py-5">
         <div class="col-md-6 m-auto text-center">
@@ -133,7 +170,7 @@
     <!-- Start Contact -->
     <div class="container py-5">
         <div class="row py-5">
-            <form class="col-md-9 m-auto" method="post" role="form">
+            <form class="col-md-9 m-auto" method="post" action="/dressrent/connection/enviar_correo.php" role="form">
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputname">Nombre</label>
@@ -163,6 +200,7 @@
     <!-- End Contact -->
 
 
+<<<<<<< Updated upstream
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -265,6 +303,65 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+=======
+        <!-- Start Footer -->
+        <footer class="bg-grey" id="tempaltemo_footer">
+            <div class="container">
+                <div class="row">
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-success border-bottom pb-3 border-light logo">DressRent</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li>
+                                <i class="fa fa-envelope fa-fw"></i>
+                                <a class="text-decoration-none" style="color: black;" href="mailto:dressrentcorporative@gmail.com">dressrentcorporative@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-dark border-bottom pb-3 border-light">Productos</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Vestidos</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Trajes</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="#">Accesorios</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-dark border-bottom pb-3 border-light">Información adicional</h2>
+                        <ul class="list-unstyled text-dark footer-link-list">
+                            <li><a class="text-decoration-none" style="color: black;" href="index.php">Inicio</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="about.html">Sobre Nosotros</a></li>
+                            <li><a class="text-decoration-none" style="color: black;" href="contact.html">Contáctenos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 bg-gray py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-left text-dark" style="text-align: center;">
+                                Desarrollado por <a rel="sponsored" style="color: black;" href="index.html">DressRent &copy; 2023</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </footer>
+        <!-- End Footer -->
+    
+        <!-- Start Script -->
+        <script src="assets/js/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/templatemo.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/cart.js"></script>
+        <!-- End Script -->
+>>>>>>> Stashed changes
 </body>
 
 </html>

@@ -1,0 +1,40 @@
+/* profile.css */
+
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+}
+
+header {
+    background-color: #FFD4C0; /* Rosa pastel para el encabezado */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333333; /* Título en gris oscuro */
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    margin: 20px;
+}
+
+.user-profile {
+    background-color: #ffffff; /* Fondo blanco para el perfil del usuario */
+    padding: 20px;
+    border: 1px solid #e6e6e6; /* Borde ligero */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.user-profile h2 {
+    color: #ff77a9; /* Rosa pastel para el título del perfil */
+    font-size: 18px;
+}
+
+.user-profile p {
+    color: #333333; /* Texto en gris oscuro */
+    margin: 0;
+}
