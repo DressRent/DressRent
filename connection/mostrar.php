@@ -47,7 +47,11 @@ if ($result) {
         echo '<ul class="list-unstyled">';
         echo '<li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>';
         echo '<li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>';
+<<<<<<< Updated upstream
         echo '<li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>';
+=======
+        echo '<li><a class="btn btn-success text-white mt-2" href="javascript:void(0);" onclick="agregarProductoDesdeBD(1);"><i class="fas fa-cart-plus"></i></a></li>';
+>>>>>>> Stashed changes
         echo '</ul>';
         echo '</div>';
         echo '</div>';

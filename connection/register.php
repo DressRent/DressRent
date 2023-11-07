@@ -32,6 +32,10 @@ if (
         echo '<div class="success-message">';
         echo "Registro exitoso.";
         echo '</div>';
+<<<<<<< Updated upstream
+=======
+        header("Location: /dressrent/index.php"); // Redirigir a la página de bienvenida
+>>>>>>> Stashed changes
     } else {
         // Error al registrar
         echo '<div class="error-message">';

@@ -37,18 +37,19 @@
     <!-- Close Top Nav -->
 
 
-<!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
 
-        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-            DressRent
-        </a>
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
+                DressRent
+            </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+<<<<<<< Updated upstream
         <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
             <div class="flex-fill">
                 <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -99,10 +100,54 @@
                 </a>
             </div>
         </div>
+=======
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.php">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                     <!-- Agrega un botón para abrir el carrito -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#" id="abrir-carrito">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    </a>
+                    
+                    <!-- Modal del carrito -->
+                    <div id="carrito-modal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close" onclick="cerrarCarrito()">&times;</span>
+                            <h2>Carrito de Compras</h2>
+                            <table id="items-carrito">
+                                <!-- Aquí se generará la tabla con los productos del carrito -->
+                            </table>
+                            <p id="total-carrito" class="total-carrito">Total: $0.00</p>
+                        </div>
+                    </div>                 
+                    
+                    <a class="nav-icon position-relative text-decoration-none" href="<?php echo isset($_SESSION['usuario']) ? 'profile.php' : 'register.html'; ?>">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+>>>>>>> Stashed changes
 
-    </div>
-</nav>
-<!-- Close Header -->
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
 
     <!-- Modal -->
     <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -120,8 +165,6 @@
             </form>
         </div>
     </div>
-
-
 
     <!-- Start Content -->
     <div class="container py-5">
@@ -235,7 +278,8 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="javascript:void(0);" onclick="agregarProductoDesdeBD(1);"><i class="fas fa-cart-plus"></i></a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -634,8 +678,8 @@
     <!--End Brands-->
 
 
-    <!-- Start Footer -->
-    <footer class="bg-grey" id="tempaltemo_footer">
+        <!-- Start Footer -->
+        <footer class="bg-grey" id="tempaltemo_footer">
         <div class="container">
             <div class="row">
 
@@ -661,7 +705,7 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-dark border-bottom pb-3 border-light">Información adicional</h2>
                     <ul class="list-unstyled text-dark footer-link-list">
-                        <li><a class="text-decoration-none" style="color: black;" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" style="color: black;" href="index.php">Inicio</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="about.html">Sobre Nosotros</a></li>
                         <li><a class="text-decoration-none" style="color: black;" href="contact.html">Contáctenos</a></li>
                     </ul>

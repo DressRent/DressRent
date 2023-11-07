@@ -27,8 +27,13 @@ if (!$conn) {
 
         if ($result && pg_num_rows($result) > 0) {
             // Inicio de sesión exitoso
+<<<<<<< Updated upstream
             $_SESSION['usuario'] = $nom_vendedor;
             header("Location: /dressrent/dashboard.html"); // Redirigir a la página de bienvenida
+=======
+            $_SESSION['usuarioo'] = $nom_vendedor;
+            header("Location: /dressrent/dashboard.php"); // Redirigir a la página de bienvenida
+>>>>>>> Stashed changes
             exit();
         } else {
             // Error de inicio de sesión

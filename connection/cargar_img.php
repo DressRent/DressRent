@@ -72,7 +72,11 @@ if (
 echo '<link rel="stylesheet" type="text/css" href="/dressrent/assets/css/panel.css">';
 // Agregar botones para redireccionar
 echo '<a href="/dressrent/inventory.html" class="button">Agregar un nuevo registro</a><br><br>';
+<<<<<<< Updated upstream
 echo '<a href="/dressrent/index.html" class="button">Ir a la página de inicio</a>';
+=======
+echo '<a href="/dressrent/index.php" class="button">Ir a la página de inicio</a>';
+>>>>>>> Stashed changes
 
 // Cerrar la conexión a la base de datos
 pg_close($conn);

@@ -25,7 +25,11 @@ if (isset($_POST['usuario_cliente']) && isset($_POST['contrasena_cliente'])) {
     if ($result && pg_num_rows($result) > 0) {
         // Inicio de sesión exitoso
         $_SESSION['usuario'] = $usuario_cliente;
+<<<<<<< Updated upstream
         header("Location: /dressrent/index.html"); // Redirigir a la página de bienvenida
+=======
+        header("Location: /dressrent/index.php"); // Redirigir a la página de bienvenida
+>>>>>>> Stashed changes
         exit();
     } else {
         // Error de inicio de sesión
