@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/dressrent/assets/css/panel.css">
+</head>
+<body>
+    <h1>Reg&iacute;strate</h1>
+    <form action="/dressrent/connection/register_v.php" method="post">
+        <label for="nom_vendedor">Nombre de Usuario:</label>
+        <input type="text" name="nom_vendedor" id="nom_vendedor" required>
+        
+        <label for="empresa">Nombre de la Empresa:</label>
+        <input type="text" name="empresa" id="empresa" required>
+        
+        <label for="telefono_empresa">N&uacute;mero de tel&eacute;fono:</label>
+        <input type="text" name="telefono_empresa" id="telefono_empresa" required>
+        
+        <label for="contrasena_vendedor">Contrase&ntilde;a:</label>
+        <input type="text" name="contrasena_vendedor" id="contrasena_vendedor" required>
+
+        <label for="domicilio">Domicilio:</label>
+        <input type="text" name="domicilio" id="domicilio" required>
+
+        <input type="submit" value="REGISTRAR">
+    </form>
+    <p style="text-align: center;">
+        ¿Eres un vendedor registrado? <a href="login_v.html">Inicia sesión</a>
+    </p>
+</body>
+</html>
